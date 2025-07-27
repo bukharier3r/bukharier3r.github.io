@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Syed Muhammad Ahmad</title>
+    <link rel="stylesheet" href="main.css" />
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="./images/logo.jpg" alt="Logo">
+            </div>
+
+            <!-- Hidden Checkbox -->
+            <input type="checkbox" id="menu-toggle" />
+
+            <!-- Hamburger Button -->
+            <label for="menu-toggle" class="hamburger">&#9776;</label>
+
+            <!-- Menu -->
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Portfolio</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <img class="profile" src="./images/profile.jpg" alt="Profile Picture" />
+        <p>Hello, I'm</p>
+        <h1><span class="blue">Syed Muhammad</span> <span class="purple">Ahmad</span></h1>
+        <h2>Software Developer</h2>
+        <div class="tags">
+            <span>Odoo Specialist</span>
+            <span>React Developer</span>
+            <span>Wordpress Expert</span>
+        </div>
+        <p class="description">
+            Bringing <span class="highlight-blue">clean code</span>,
+            <span class="highlight-blue">modern design</span>,
+            and <span class="highlight-blue">functional solutions</span> together.
+        </p>
+        <div class="buttons">
+            <button class="btn work">View My Work</button>
+            <button class="btn touch">Get In Touch</button>
+        </div>
+    </section>
+    <!-- About Me Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+
+            <!-- Introduction -->
+            <div class="intro-text">
+                <button class="get-to-know-btn">Get to know me</button>
+                <h1 class="about-me">About <span class="highlight">Me</span></h1>
+                <p>Passionate developer crafting digital solutions with modern technologies and <br />creative
+                    problem-solving.
+                </p>
+            </div>
+
+            <div class="about-grid">
+
+                <!-- Left Side: Profile & Journey -->
+                <div class="profile-left">
+                    <img src="./images/profile.jpg" alt="Profile Image" class="profile-img">
+                    <div class="professional-journey">
+                        <h2>Professional Journey</h2>
+                        <p>
+                            I am a passionate developer with extensive experience in
+                            <a href="#">Odoo customization</a>, having architected and developed multiple complex
+                            modules
+                            that streamline business processes.
+                        </p>
+                        <p>
+                            My expertise spans across modern web technologies including
+                            <a href="#">React.js</a> for dynamic frontends,
+                            <a href="#">Laravel</a> for robust backends, and
+                            <a href="#">WordPress</a> for content management solutions.
+                        </p>
+                        <p>
+                            With <strong>2 years</strong> of professional experience at
+                            <a href="#">Softsavvy</a>, I've successfully delivered diverse projects that
+                            have enhanced business efficiency and user experience.
+                        </p>
+
+                        <div class="experience-summary">
+                            <div><strong>2+</strong><br>Years Experience</div>
+                            <div><strong>10+</strong><br>Projects Completed</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side: Experience, Skills -->
+                <div class="profile-right">
+
+                    <h2 class="section-experience">Experience & <span class="highlight">Education</span></h2>
+                    <div class="experience-grid">
+                        <div class="experience-card">
+                            <div class="icon">💼</div>
+                            <h3>Software Developer</h3>
+                            <p class="company">Softsavvy</p>
+                            <span class="date">2023 - 2025</span>
+                            <p>Contributed to multiple successful projects, including the development of responsive and
+                                modern websites for digital service providers.</p>
+                        </div>
+                        <div class="experience-card">
+                            <div class="icon">🎓</div>
+                            <h3>BBIT (continued)</h3>
+                            <p class="company">Virtual University of Pakistan</p>
+                            <span class="date">Current</span>
+                            <p>Pursuing Bachelor's degree in Information Technology, focusing on software development
+                                and
+                                modern web technologies.</p>
+                        </div>
+                    </div>
+
+                    <div class="skills-box">
+                        <h3>Technical Skills</h3>
+                        <div class="skills-list">
+                            <span>Odoo Development</span>
+                            <span>React.js</span>
+                            <span>Laravel</span>
+                            <span>WordPress</span>
+                            <span>Frontend Development</span>
+                            <span>Backend Development</span>
+                            <span>UI/UX Design</span>
+                            <span>Database Management</span>
+                        </div>
+                        <div class="location-box">📍 Based in Pakistan</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Projects Section -->
+    <section class="projects-section" id="projects">
+        <div class="container">
+            <h2 class="section-title">Other <span class="highlight">Projects</span></h2>
+
+            <div class="projects-grid">
+                <!-- Card 1 -->
+                <div class="project-card">
+                    <img src="./images/Project.jpg" alt="Odoo Custom Modules">
+                    <div class="project-content">
+                        <h3>CFMS Trademark System</h3>
+                        <p>Advanced trademark and IP management modules with customized stages and features.</p>
+                        <div class="tags">
+                            <span>Python</span>
+                            <span>Odoo Framework</span>
+                            <span>PostgreSQL</span>
+                            <span>XML</span>
+                        </div>
+                        <div class="buttons">
+                            <a href='./odoo_custom_detail.html' class="demo-btn">🔍 View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="project-card">
+                    <img src="./images/project2.jpg" alt="WordPress Solutions">
+                    <div class="project-content">
+                        <h3>WordPress Solutions</h3>
+                        <p>Custom WordPress websites and themes developed for various clients with modern design
+                            principles.</p>
+                        <div class="tags">
+                            <span>WordPress</span>
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="buttons">
+                            <a href='wordpress.html' class="demo-btn">🔍 View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coming Next Section -->
+            <!-- <div class="coming-next">
+                <div class="icon-arrow">➜</div>
+                <h3 class="coming-title">What’s <span class="highlight">Coming Next</span></h3>
+                <p>Exciting projects currently in development that will showcase cutting-edge technologies</p>
+
+                <div class="upcoming-tags">
+                    <span>🛒 E-commerce Platform (Laravel)</span>
+                    <span>📱 Mobile App (React Native)</span>
+                    <span>📊 Data Analytics Dashboard</span>
+                    <span>🔐 API Management System</span>
+                </div>
+
+                <div class="stay-tuned">
+                    <a href="#">✨ Stay tuned for more exciting developments!</a>
+                </div>
+            </div> -->
+        </div>
+    </section>
+    <!-- Professional Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <button class="small-btn">What I Offer</button>
+                <h2>Professional <span class="highlight">Services</span></h2>
+                <p>Comprehensive development solutions tailored to transform your digital vision into reality</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Service Card 1 -->
+                <div class="service-card">
+                    <div class="icon">⚙️</div>
+                    <h3>Odoo Customization & Development</h3>
+                    <p>Custom Odoo modules, workflow automation, and ERP solutions tailored to your business needs.</p>
+                    <ul>
+                        <li>Custom Module Development</li>
+                        <li>Business Process Automation</li>
+                        <li>Data Migration & Integration</li>
+                        <li>Performance Optimization</li>
+                    </ul>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="service-card">
+                    <div class="icon">🌐</div>
+                    <h3>Website Development</h3>
+                    <p>Full-stack web development using modern technologies like WordPress, React, and Laravel.</p>
+                    <ul>
+                        <li>WordPress Custom Themes</li>
+                        <li>React.js Applications</li>
+                        <li>Laravel Backend Development</li>
+                        <li>Responsive Design</li>
+                    </ul>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="service-card">
+                    <div class="icon">💻</div>
+                    <h3>Frontend Development</h3>
+                    <p>Modern interfaces built with React.js, responsive design, and excellent user experience.</p>
+                    <ul>
+                        <li>React.js Development</li>
+                        <li>Modern UI/UX Design</li>
+                        <li>Interactive Components</li>
+                        <li>Mobile-First Approach</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Additional Expertise -->
+            <div class="expertise-box">
+                <div class="icon-large">📘</div>
+                <h3>Additional <span class="highlight">Expertise</span></h3>
+                <p>Beyond core development, I provide comprehensive technical services to ensure your project’s complete
+                    success</p>
+
+                <div class="expertise-tags">
+                    <span>API Development & Integration</span>
+                    <span>UI/UX Design</span>
+                    <span>Code Review & Consultation</span>
+                    <span>Canva Design</span>
+                    <span>Maintenance & Support</span>
+                    <span>Performance Optimization</span>
+                </div>
+
+                <div class="cta-buttons">
+                    <a href="#" class="start-btn">Start Discussion</a>
+                    <a href="#" class="view-btn">View Portfolio</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Get In Touch Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <button class="small-btn">Let’s Connect</button>
+                <h2>Get <span class="highlight">In Touch</span></h2>
+                <p>Ready to bring your next project to life? Let’s discuss how we can create something amazing together
+                </p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Left Contact Info -->
+                <div class="contact-info">
+                    <h3>Let’s Start Something Great</h3>
+                    <p>
+                        I’m passionate about turning <span class="blue-text">innovative ideas</span> into <span
+                            class="blue-text">digital reality</span>.
+                        Whether you’re looking to <span class="blue-text">build a new application</span>, <span
+                            class="blue-text">enhance existing systems</span>,
+                        or <span class="blue-text">explore emerging technologies</span>, I’m here to help make it
+                        happen.
+                    </p>
+
+                    <div class="info-cards">
+                        <div class="info-box"><span>📧</span> bukhari2025a@gmail.com</div>
+                        <div class="info-box"><span>💬</span> +92 327 0798987</div>
+                        <div class="info-box"><span>📍</span> Pakistan</div>
+                        <div class="info-box"><span>⏱</span> Within 24 Hours</div>
+                    </div>
+
+                    <div class="quick-connect">
+                        <h4>Quick Connect</h4>
+                        <div class="quick-buttons">
+                            <a href="https://www.linkedin.com/in/bukhari321012?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                                class="linkedin-btn">LinkedIn</a>
+                            <a href="https://wa.me/923270798987?text=Hello%20Sir%2C%20I%20want%20to%20discuss%20my%20project"
+                                target="_blank" class="whatsapp-btn">WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Contact Form -->
+                <div class="contact-form">
+                    <h3>Send a <span class="highlight">Message</span></h3>
+                    <p>Fill out the form below and I’ll get back to you within 24 hours.</p>
+                
+                    <form action="https://formsubmit.co/bukhari2025a@gmail.com" method="POST">
+                        <input type="hidden" name="_captcha" value="false">
+                
+                        <div class="form-row">
+                            <input type="text" name="name" placeholder="Your Name *" required>
+                            <input type="email" name="email" placeholder="Email Address *" required>
+                        </div>
+                        <input type="text" name="subject" placeholder="Project Subject *" required>
+                        <textarea name="message" rows="5" placeholder="Tell me about your project requirements..." required></textarea>
+                
+                        <button type="submit" class="send-btn">📨 Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <!-- Left -->
+            <div class="footer-col left">
+                <h3><span class="blue-text">Syed</span> Muhammad <span class="purple-text">Ahmad</span></h3>
+                <p>
+                    Software Developer specializing in Odoo Development, React.js, Laravel, and WordPress. Creating
+                    modern, efficient solutions for businesses.
+                </p>
+                <p>Made with <span style="color:#ff5f5f;">❤️</span> in Pakistan</p>
+            </div>
+
+            <!-- Middle -->
+            <div class="footer-col middle">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Right -->
+            <div class="footer-col right">
+                <h4>Get In Touch</h4>
+                <p><i class="fas fa-envelope icon"></i> <a href="mailto:bukhari2025a@gmail.com">bukhari2025a@gmail.com</a></p>
+                <p><i class="fab fa-whatsapp icon"></i> <a href="tel:+923270798987">+92 327 0798987</a></p>
+                <p><i class="fab fa-linkedin"></i> <a
+                        href="https://www.linkedin.com/in/bukhari321012?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">LinkedIn
+                        Profile</a></p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 Syed Muhammad Ahmad. All rights reserved.</p>
+            <a href="#" class="back-top-btn">⬆️ Back to Top</a>
+        </div>
+    </footer>
+</body>
+
+</html>

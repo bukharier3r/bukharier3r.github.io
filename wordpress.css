@@ -1,0 +1,380 @@
+body {
+    background: #0f172a;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+header {
+    width: 100%;
+    background: #0a0f2c;  /* Header ka background (change kar sakte ho) */
+    position: fixed;
+    z-index: 9999;  /* Always stay above other content */
+}
+
+header.scrolled {
+  background: rgba(14, 26, 43, 0.7); /* Scroll hone par transparent */
+}
+
+/* Navbar Style */
+nav {
+    display: flex;
+    justify-content: space-between; /* Logo left, menu right */
+    align-items: center;
+    padding: 15px 50px;
+}
+
+/* Logo */
+.logo img {
+    width: 70px;
+    height: auto;
+    display: block;
+}
+
+/* Nav links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links li a {
+    position: relative;
+    font-size: 18px;
+    text-decoration: none;
+    color: #00b2ff;
+    font-weight: 500;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+/* Hover underline effect */
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: lightblue;
+    transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+}
+
+.nav-links li a:hover {
+    color: #0077b6;
+}
+
+.detail-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px;
+    gap: 30px;
+}
+
+.detail-content {
+    width: 55%;
+}
+
+.detail-content h2 {
+    color: #7d7dff;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.detail-content p {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+}
+
+.feature-list li {
+    background: #1e293b;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: #fff;
+}
+
+.detail-image {
+    width: 35%; /* Image right side */
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: #1e1e2f;    
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden; /* border animation ke liye */
+}
+
+/* Image Style */
+.detail-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 12px;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+/* Hover Effect: Zoom + Brightness */
+.detail-image:hover img {
+    transform: scale(1.05);
+    filter: brightness(1.15);
+    -webkit-filter: brightness(1.15);
+}
+
+/* Border Animation (lines) */
+.detail-image::before, 
+.detail-image::after {
+    content: "";
+    position: absolute;
+    border: 2px solid #6a5acd; /* attractive purple border */
+    width: 0;
+    height: 0;
+    transition: all 0.4s ease;
+    border-radius: 12px;
+}
+
+.detail-image::before {
+    top: 10px;
+    left: 10px;
+}
+
+.detail-image::after {
+    bottom: 10px;
+    right: 10px;
+}
+
+/* Hover pe border expand hoga */
+.detail-image:hover::before,
+.detail-image:hover::after {
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+}
+
+.intro-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: #111827;
+    color: #fff;
+}
+
+.intro-section h1 {
+    font-size: 2.5rem;
+    color: #7c7cff;
+    margin-bottom: 15px;
+}
+
+.intro-section p {
+    color: #ccc;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.intro-image img {
+    max-width: 80%;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+/* Remaining previous detail-container CSS remains same */
+
+
+
+/* video add css*/
+.video-section {
+    padding: 60px 20px;
+    background: #0e1a2b;   /* Background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-container {
+    text-align: center;
+    max-width: 900px;
+    width: 100%;
+}
+
+.video-title {
+    color: #38bdf8;
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.video-container video {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    outline: none;
+    background: #000;
+}
+
+/* Hover effect on video */
+.video-container video:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease;
+}
+/* Base CSS (your same code rahega jo diya hai) */
+
+/* ------------ RESPONSIVE STYLES ------------ */
+@media (max-width: 1024px) {
+  nav {
+    padding: 15px 30px;
+  }
+  
+  .detail-container {
+    padding: 40px 20px;
+    gap: 20px;
+  }
+
+  .detail-content h2 {
+    font-size: 1.8rem;
+  }
+  
+  .video-title {
+    font-size: 1.6em;
+  }
+}
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Hide checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Default menu (desktop) */
+.nav-links {
+  display: flex;
+  gap: 40px;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px; /* header height */
+    left: 0;
+    background: #0a0f2c;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    gap: 20px;
+    padding: 20px 0;
+  }
+
+  /* When checkbox is checked, menu open */
+  #menu-toggle:checked ~ .nav-links {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    position: fixed;
+  }
+  
+  .logo img {
+    width: 55px;
+  }
+
+  .detail-container {
+    padding: 20px 10px;
+  }
+
+  .detail-content h2 {
+    font-size: 1.3rem;
+  }
+
+  .detail-content p {
+    font-size: 0.85rem;
+  }
+
+  .feature-list li {
+    font-size: 0.8rem;
+    padding: 8px 10px;
+  }
+
+  .intro-section h1 {
+    font-size: 1.6rem;
+    margin-top: 10px;
+  }
+
+  .intro-section p {
+    font-size: 0.9rem;
+  }
+
+  .video-title {
+    font-size: 1.3rem;
+  }
+
+  .video-container video {
+    border-radius: 10px;
+  }
+}
+/* Container flex for image right, text left */
+.intro-container, 
+.detail-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Text left side */
+.intro-text, 
+.detail-content {
+    width: 55%;
+    text-align: left; /* heading left aligned */
+}
+
+/* Image right side */
+.detail-image {
+    width: 45%;
+    height: 70%;
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: #1e1e2f;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
