@@ -5,6 +5,9 @@ body {
     margin: 0;
     padding: 0;
 }
+.hamburger{
+  display: none;
+}
 header {
     width: 100%;
     background: #0a0f2c;  /* Header ka background (change kar sakte ho) */
@@ -46,6 +49,10 @@ nav {
     font-weight: 500;
     padding-bottom: 5px;
     transition: color 0.3s ease;
+    -webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    -ms-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
 }
 
 /* Hover underline effect */
@@ -58,6 +65,10 @@ nav {
     width: 0;
     background-color: lightblue;
     transition: width 0.3s ease;
+    -webkit-transition: width 0.3s ease;
+    -moz-transition: width 0.3s ease;
+    -ms-transition: width 0.3s ease;
+    -o-transition: width 0.3s ease;
 }
 
 .nav-links li a:hover::after {
@@ -238,111 +249,90 @@ nav {
     transform: scale(1.02);
     transition: 0.3s ease;
 }
-/* Base CSS (your same code rahega jo diya hai) */
-
-/* ------------ RESPONSIVE STYLES ------------ */
-@media (max-width: 1024px) {
-  nav {
-    padding: 15px 30px;
-  }
-  
-  .detail-container {
-    padding: 40px 20px;
-    gap: 20px;
-  }
-
-  .detail-content h2 {
-    font-size: 1.8rem;
-  }
-  
-  .video-title {
-    font-size: 1.6em;
-  }
-}
-
-.hamburger {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-  color: #fff;
-}
-
-/* Hide checkbox */
-#menu-toggle {
-  display: none;
-}
-
-/* Default menu (desktop) */
-.nav-links {
-  display: flex;
-  gap: 40px;
-}
-
-/* Mobile Styles */
+/* ========== Mobile Responsive Styles ========== */
 @media (max-width: 768px) {
+  /* Show hamburger */
   .hamburger {
     display: block;
-  }
-
+    color: #898383;
+    size: 30ch;
+  }  
+/* Hide menu by default */
   .nav-links {
-    position: absolute;
-    top: 70px; /* header height */
-    left: 0;
-    background: #0a0f2c;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
     display: none;
-    gap: 20px;
-    padding: 20px 0;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* below navbar */
+    right: 0;
+    width: 200px;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    gap: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 1000;
   }
 
-  /* When checkbox is checked, menu open */
+  /* When checkbox checked → show menu */
   #menu-toggle:checked ~ .nav-links {
     display: flex;
   }
-}
 
-@media (max-width: 480px) {
-  header {
-    position: fixed;
-  }
-  
-  .logo img {
-    width: 55px;
+
+  /* Intro Section */
+  .intro-section {
+    padding: 20px;
+    text-align: center;
   }
 
+  .intro-title {
+    margin-top: 80px !important; /* fixed value */
+    font-size: 4rem;
+    /* agar percentage chahiye to */
+    /* margin-top: 50% !important; */
+  }
+  .intro-section intro-title.h1 {
+    font-size: 22px;
+    margin-top: 20px;
+  }
+
+  .intro-image img {
+    flex: 1;
+    order: -1;
+    width: 100%;
+    height: auto;
+    margin-top: 15px;
+  }
+
+  /* Detail Sections */
   .detail-container {
-    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
   }
 
-  .detail-content h2 {
-    font-size: 1.3rem;
+  .detail-content, 
+  .detail-image {
+    width: 100%;
+    text-align: center;
+    order: -1;
   }
 
-  .detail-content p {
-    font-size: 0.85rem;
+  .detail-image img {
+    width: 100%;
+    height: auto;
   }
 
-  .feature-list li {
-    font-size: 0.8rem;
-    padding: 8px 10px;
-  }
-
-  .intro-section h1 {
-    font-size: 1.6rem;
-    margin-top: 10px;
-  }
-
-  .intro-section p {
-    font-size: 0.9rem;
-  }
-
-  .video-title {
-    font-size: 1.3rem;
+  /* Video Section */
+  .video-container {
+    padding: 20px;
+    text-align: center;
   }
 
   .video-container video {
-    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
   }
 }

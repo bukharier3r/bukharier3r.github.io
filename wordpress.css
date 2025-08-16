@@ -117,6 +117,7 @@ nav {
     padding: 20px;
     background: #1e1e2f;    
     border-radius: 20px;
+    order: -1;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
     position: relative;
     overflow: hidden; /* border animation ke liye */
@@ -274,74 +275,6 @@ nav {
   gap: 40px;
 }
 
-/* Mobile Styles */
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
-
-  .nav-links {
-    position: absolute;
-    top: 70px; /* header height */
-    left: 0;
-    background: #0a0f2c;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    display: none;
-    gap: 20px;
-    padding: 20px 0;
-  }
-
-  /* When checkbox is checked, menu open */
-  #menu-toggle:checked ~ .nav-links {
-    display: flex;
-  }
-}
-
-@media (max-width: 480px) {
-  header {
-    position: fixed;
-  }
-  
-  .logo img {
-    width: 55px;
-  }
-
-  .detail-container {
-    padding: 20px 10px;
-  }
-
-  .detail-content h2 {
-    font-size: 1.3rem;
-  }
-
-  .detail-content p {
-    font-size: 0.85rem;
-  }
-
-  .feature-list li {
-    font-size: 0.8rem;
-    padding: 8px 10px;
-  }
-
-  .intro-section h1 {
-    font-size: 1.6rem;
-    margin-top: 10px;
-  }
-
-  .intro-section p {
-    font-size: 0.9rem;
-  }
-
-  .video-title {
-    font-size: 1.3rem;
-  }
-
-  .video-container video {
-    border-radius: 10px;
-  }
-}
 /* Container flex for image right, text left */
 .intro-container, 
 .detail-container {
@@ -377,4 +310,118 @@ nav {
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
+}
+
+/* =========================
+   📱 Mobile Responsive CSS
+   ========================= */ 
+@media (max-width: 768px) {
+  /* Show hamburger */
+  .hamburger {
+    display: block;
+    color: #898383;
+    size: 30ch;
+  }  
+/* Hide menu by default */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* below navbar */
+    right: 0;
+    width: 200px;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    gap: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 1000;
+  }
+
+  /* When checkbox checked → show menu */
+  #menu-toggle:checked ~ .nav-links {
+    display: flex;
+  }
+  
+  /* Intro Section */
+  .intro-section {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .intro-section h1 {
+    margin-top: 50px;
+    font-size: 28px;
+  }
+  .intro-section h1.intro-title{
+  font-size: 2.5rem;
+  margin-top: 85px !important;
+  }
+
+  .intro-section p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .intro-image img {
+    width: 100%;
+    flex: 1;
+    height: auto;
+    margin-top: 15px;
+  }
+
+  /* Intro Container (text + image side by side → column) */
+  .intro-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .intro-text,
+  .detail-image {
+    width: 100%;
+  }
+
+  .detail-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+  }
+
+  /* Detail Section */
+  .detail-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .detail-content,
+  .detail-image {
+    width: 100%;
+  }
+
+  /* Video Section */
+  .video-container {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .video-container h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .video-container video {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+  }
+
+  /* General typography */
+  h1, h2 {
+    word-break: break-word;
+  }
 }
